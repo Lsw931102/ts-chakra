@@ -1,0 +1,15 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	min-height: 100vh;
+	color: #fff;
+	background-color: #1b1b1b;
+}
+
+div,
+p {
+	margin: 0;
+	padding: 0;
+}
