@@ -2,6 +2,7 @@
 import { extendTheme } from '@chakra-ui/react'
 
 import px2vw from '@/utils/px2vw'
+import styles from './styles'
 
 // 2. Extend the theme to include custom colors, fonts, etc
 
@@ -137,4 +138,5 @@ export const theme = extendTheme({
 	sizes: {
 		xl: '1080px',
 	},
+	styles,
 })
