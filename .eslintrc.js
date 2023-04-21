@@ -4,6 +4,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -17,6 +22,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+
   ignorePatterns: ['node_modules/*', 'build/*', '.out/*', '!.prettierrc.js'],
   plugins: ['prettier', '@typescript-eslint', 'jsx-a11y'],
   rules: {
