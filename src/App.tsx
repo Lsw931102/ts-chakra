@@ -9,22 +9,22 @@ import { getLocalStorage } from '@/utils/storage'
 import globalStore from './stores/global'
 
 function App() {
-	useEffect(() => {
-		const isLogin = getLocalStorage('isLogin')
-		globalStore.setState({
-			isLogin: isLogin === '1' ? true : false,
-		})
-	}, [])
-	return (
-		<ChakraProvider theme={theme}>
-			<BrowserRouter>
-				<Header />
-				<Routes>
-					<Route path='/' element={<Home />} />
-				</Routes>
-			</BrowserRouter>
-		</ChakraProvider>
-	)
+  useEffect(() => {
+    const isLogin = getLocalStorage('isLogin')
+    globalStore.setState({
+      isLogin: isLogin === '1' ? true : false,
+    })
+  }, [])
+  return (
+    <ChakraProvider theme={theme}>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </ChakraProvider>
+  )
 }
 
 export default App

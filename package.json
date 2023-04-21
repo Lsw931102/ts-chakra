@@ -1,65 +1,79 @@
 {
-	"name": "ts-chakra",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"@chakra-ui/react": "^2.5.5",
-		"@cosmjs/amino": "^0.30.1",
-		"@cosmjs/encoding": "^0.30.1",
-		"@cosmjs/proto-signing": "^0.30.1",
-		"@cosmjs/stargate": "^0.30.1",
-		"@craco/craco": "^7.1.0",
-		"@emotion/react": "^11.10.6",
-		"@emotion/styled": "^11.10.6",
-		"@testing-library/jest-dom": "^5.16.5",
-		"@testing-library/react": "^13.4.0",
-		"@testing-library/user-event": "^13.5.0",
-		"bignumber.js": "^9.1.1",
-		"buffer": "^6.0.3",
-		"crypto-browserify": "^3.12.0",
-		"css-loader": "^6.7.3",
-		"css-modules-typescript-loader": "^4.0.1",
-		"dayjs": "^1.11.7",
-		"ethers": "^5.7.2",
-		"framer-motion": "^10.12.4",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-image-webp": "^0.8.0",
-		"react-router-dom": "^6.9.0",
-		"react-scripts": "5.0.1",
-		"stream-browserify": "^3.0.0",
-		"typescript": "^5.0.2",
-		"wagmi": "^0.12.3",
-		"web-vitals": "^2.1.4",
-		"zustand": "^4.3.6"
-	},
-	"scripts": {
-		"dev": "craco start",
-		"build": "craco build",
-		"test": "craco test",
-		"eject": "craco eject",
-		"lint:ts": "tsc --noEmit && eslint src --ext .ts,.tsx ",
-		"lint:scss": "stylelint src/**/*.scss --fix"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"@types/mocha": "^10.0.1"
-	}
+  "name": "ts-chakra",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/react": "^2.5.5",
+    "@cosmjs/amino": "^0.30.1",
+    "@cosmjs/encoding": "^0.30.1",
+    "@cosmjs/proto-signing": "^0.30.1",
+    "@cosmjs/stargate": "^0.30.1",
+    "@craco/craco": "^7.1.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bignumber.js": "^9.1.1",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "css-loader": "^6.7.3",
+    "css-modules-typescript-loader": "^4.0.1",
+    "dayjs": "^1.11.7",
+    "ethers": "^5.7.2",
+    "framer-motion": "^10.12.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-image-webp": "^0.8.0",
+    "react-router-dom": "^6.9.0",
+    "react-scripts": "5.0.1",
+    "stream-browserify": "^3.0.0",
+    "typescript": "^5.0.2",
+    "wagmi": "^0.12.3",
+    "web-vitals": "^2.1.4",
+    "zustand": "^4.3.6"
+  },
+  "scripts": {
+    "dev": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
+    "lint:ts": "tsc --noEmit && eslint src --ext .ts,.tsx ",
+    "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,md,json}'",
+    "eslint": "eslint --fix --ext .tsx,.ts,.jsx,.js src/",
+    "lint": "npm run lint:ts && npm run eslint && npm run prettier"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.8.7"
+  }
 }

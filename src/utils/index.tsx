@@ -1,9 +1,6 @@
-
 // format address
 export const formatAddress = (address?: string) => {
-  return address
-    ? address.replace(address?.slice(6, address.length - 4), '...')
-    : '--';
+  return address ? address.replace(address?.slice(6, address.length - 4), '...') : '--'
 }
 
 // 去除末尾多余的0
